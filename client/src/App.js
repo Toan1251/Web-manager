@@ -21,7 +21,6 @@ function App() {
           <Route path='import/dependency'>
             <SubDependencies />
           </Route>
-
           <Route path='/crawl/result'>
             <CrawlResult />
           </Route>
