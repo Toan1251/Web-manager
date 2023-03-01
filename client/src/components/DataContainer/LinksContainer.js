@@ -11,7 +11,7 @@ const LinksContainer = ({links, name, isDown, onClick, ctnId}) => {
         <div className="container">
             <DataCompact name={name} isDown={isDown} onClick={onClick}/>
             <ul id={ctnId} className="links-container hidden">
-                {links.map((link, index) => {
+                {links.length === 0 ? <li></li> : links.map((link, index) => {
                     return (
                         <li key={index}>
                             <a href={link} target="_blank" rel="noreferrer"><p>{link}</p></a>

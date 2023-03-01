@@ -3,13 +3,14 @@ import './Form.css';
 import Popup from '../Popup/Popup';
 // import store from '../../store/store';
 import { useDispatch, useSelector } from 'react-redux';
-import { crawlDataFromUrl, selectUrlStatus, changeStatus } from "../../store/UrlSlice";
+import { crawlDataFromUrl, selectUrlStatus, changeStatus , selectUrlData} from "../../store/UrlSlice";
 import { Redirect } from 'react-router-dom';
 
 const CrawlSiteForm = () => {
     const dispatch = useDispatch();
 
     const status = useSelector(selectUrlStatus);
+    const data = useSelector(selectUrlData);
 
     const [site, setSite] = useState('');
 
@@ -68,7 +69,7 @@ const CrawlSiteForm = () => {
                     </div>
                 </form>
             }
-            {status === 'fulfilled' && <Redirect to={`/crawl/result?site=${site}`} />}
+            {status === 'fulfilled' && <Redirect to={`/crawl/result/${data.data._id}`} />}
         </div>
     )
 }

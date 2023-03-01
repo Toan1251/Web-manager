@@ -166,7 +166,7 @@ const getAllData = async url => {
         await page.close();
         await browser.close();
     }catch (e){
-
+        console.log(e);
     }
 
     links = helper.getUnique(links);

@@ -19,7 +19,7 @@ const urlSchema = mongoose.Schema({
         type:Array,
         default: [],
     },
-    stylesheet: {
+    stylesheets: {
         type:Array,
         default: [],
     },
