@@ -1,0 +1,55 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    width: 80%;
+    margin: auto;
+    position: relative;
+    top: 30px;
+    font-size: 20px;
+}
+
+.path {
+    color: #08845A;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border-left: 1px solid black;
+}
+
+thead {
+    color: #fff;
+    background: #F24766 !important;
+}
+
+.dependency {
+    padding: 5px;
+    width: 75%;
+    text-align: center;
+}
+
+.version {
+    padding: 5px;
+    width: 25%;
+    text-align: center;
+}
+
+tbody tr:nth-child(even) {
+    background: #fff
+}
+
+tbody tr:nth-child(odd) {
+    background: #FBF7F4
+}
+
+a {
+    text-decoration: none;
+    color: #08845A;
+}

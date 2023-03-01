@@ -1,0 +1,60 @@
+form {
+    position: relative;
+    top: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    width: 50%;
+    margin: 150px 25%;
+}
+
+label {
+    font-size: 12px;
+    color: #007450;
+    position: relative;
+    top: 20px;
+}
+
+input {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+input[type="text"] {
+    padding: 10px 15px;
+    box-sizing: border-box;
+    border: 1px solid #007450;
+    border-radius: 25px
+}
+
+input[type="text"]:focus {
+    background-color: aliceblue;
+}
+
+.form-element {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.form-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.domain,
+.site {
+    flex-grow: 10;
+}
+
+.submit {
+    background-color: #F24766;
+    border-radius: 25px;
+    border: none;
+    color: #fff;
+    flex-grow: 2;
+    font-size: 18px;
+}

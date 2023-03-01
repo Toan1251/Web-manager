@@ -1,0 +1,50 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    width: 80%;
+    margin: auto;
+    position: relative;
+    top: 30px;
+    font-size: 20px;
+}
+
+.description {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.description-item {
+    margin-right: 5%;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border-left: 1px solid black;
+}
+
+thead {
+    color: #fff;
+    background: #F24766 !important;
+}
+
+tbody tr:nth-child(even) {
+    background: #fff
+}
+
+tbody tr:nth-child(odd) {
+    background: #FBF7F4
+}
+
+td {
+    text-align: center;
+    padding: 5px;
+    width: 25%
+}

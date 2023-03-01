@@ -1,0 +1,94 @@
+.error-container {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 110px;
+    right: 30px;
+    align-items: stretch;
+    width: 250px;
+    height: 70px;
+    /* border: 1px #007450 solid; */
+    box-shadow: 5px 5px 10px black;
+    z-index: 1;
+    animation-name: slideIn;
+    animation-duration: 6s;
+    animation-iteration-count: 1;
+}
+
+.error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F24766;
+    border-right: 1px #007450 solid;
+    flex-grow: 1;
+}
+
+.message {
+    flex-grow: 3;
+    text-align: center;
+    padding: 8px 15px;
+}
+
+.div-icon {
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.error-title {
+    font-size: 12px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    color: black;
+}
+
+.loading-animation {
+    animation-name: loading;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes slideIn {
+    0% {
+        right: -300px;
+    }
+    10% {
+        right: 30px;
+    }
+    100% {
+        right: 30px;
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        right: 30px;
+    }
+    10% {
+        right: -300px;
+    }
+    100% {
+        right: -300px;
+    }
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
