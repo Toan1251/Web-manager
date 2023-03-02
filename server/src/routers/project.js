@@ -59,17 +59,14 @@ router.post('/', async (req, res) => {
             type: 'config'
         }, 'url')
 
-        const temp = configUrls[0].url
-        
-        let language = "";
-        if(temp.endsWith('package.json')){
-            language = 'javascript'
-        }else if(temp.endsWith('pom.xml') || temp.endsWith('build.gradle')){
-            language = 'java'
-        }
-
         const fn = async(isDev=false) => {
             configUrls.forEach(async url => {
+                let language = "";
+                if(url.url.endsWith('package.json')){
+                    language = 'javascript'
+                }else if(url.url.endsWith('pom.xml') || url.url.endsWith('build.gradle')){
+                    language = 'java'
+                }
                 const dependenciesList = await cf.getConfig(url.url, isDev);
                 dependenciesList.forEach(async dp => {
                     let dependencyObj = await db.findObject(dp, 'dependency');
