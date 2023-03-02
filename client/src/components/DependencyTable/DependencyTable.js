@@ -26,7 +26,7 @@ const DependencyTable = ({path, dependenciesList}) => {
                     {dependenciesList.map((item, index) => {
                         return (
                             <tr key={index}>
-                                <td className="dependency"><Link to={`import/dependency?name=${item.name}&v=${getVer(item.ver)}`}>{item.name}</Link></td>
+                                <td className="dependency"><Link to={`/import/dependency?name=${item.name}&v=${getVer(item.ver)}`}>{item.name}</Link></td>
                                 <td className="version">{getVer(item.ver)}</td>
                             </tr>
                         )

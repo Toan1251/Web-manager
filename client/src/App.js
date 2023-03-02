@@ -15,17 +15,17 @@ function App() {
       <NavigationBar />
       <main>
         <Switch>
-          <Route path="/import/result/:id">
+          <Route exact path="/import/result/:id">
             <DependenciesResult />
           </Route>
-          <Route path='import/dependency'>
+          <Route exact path='/import/dependency'>
             <SubDependencies />
+          </Route>
+          <Route exact path="/import">
+            <ImportProject />
           </Route>
           <Route path='/crawl/result/:id'>
             <CrawlResult />
-          </Route>
-          <Route path="/import">
-            <ImportProject />
           </Route>
           <Route path="/crawl">
             <CrawlSite />

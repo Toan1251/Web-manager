@@ -20,7 +20,7 @@ const Home = () => {
             <h1>Imported Projects List</h1>
             {projectStatus === 'loading' ? <FiLoader className='loading-container'/> : projects.map(project => {
                 return (
-                    <Link key={project._id} to={`/import/${project._id}`}>
+                    <Link key={project._id} to={`/import/result/${project._id}`}>
                         <div className='project-container'>
                             <p className='name'><strong>Name: </strong>{project.name}</p>
                             <p className='root_url'><strong>Url: </strong>{project.root_url}</p>
